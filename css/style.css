@@ -19,8 +19,13 @@
 }
 
 .custom-btns{
-  padding: 40px 15px;
+  position: absolute;
+  right: 780px;
   width: 300px;
+}
+
+.custom-label{
+  color: #9d9d9d;
 }
 
 

@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Cron</title>
+  <title>Angular Timer</title>
 </head>
 <body ng-controller="Cron as cron">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="javascript:void(0)" class="navbar-brand">Angular JS Cron</a>
+        <a href="javascript:void(0)" class="navbar-brand">{{cron.title}}</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -20,7 +20,8 @@
           </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Set Counter Time" ng-model="cron.time">
+              <label for="angularTimer" class="form-label custom-label">Time: </label>
+              <input id="angularTimer" type="text" class="form-control" placeholder="Set Counter Time" ng-model="cron.time">
             </div>
           </form>
       </div>
@@ -39,7 +40,7 @@
            </div>
         </div>
       </div>
-        <p>
+        <p class="custom-btns">
           <a
             class="btn btn-primary btn-lg btn-block"
             href="javascript:void(0)"
