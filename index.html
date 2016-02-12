@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cron</title>
+</head>
+<body ng-controller="Cron as cron">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="javascript:void(0)" class="navbar-brand">Angular JS Cron</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="no-pointer" href="javascript:void(0)">Developed By:</a></li>
+            <li class="active"><a href="https://github.com/joaoSakai" target="_blank">joaoSakai</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Set Counter Time" ng-model="cron.time">
+            </div>
+          </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" >
+    <div class="starter-template">
+      <h1>{{cron.title}}</h1>
+      <div id="cron" class="container">
+        <div class="circle circle-border">
+           <div class="circle-inner">
+               <div class="score-text">
+                  {{cron.counter}}
+                </div>
+           </div>
+        </div>
+      </div>
+        <p>
+          <a
+            class="btn btn-primary btn-lg btn-block"
+            href="javascript:void(0)"
+            ng-click="cron.start()">Start</a>
+
+          <a
+            class="btn btn-warning btn-lg btn-block"
+            href="javascript:void(0)"
+            ng-click="cron.reset()">Reset</a>
+
+          <a
+            class="btn btn-danger btn-lg btn-block"
+            href="javascript:void(0)"
+            ng-click="cron.stop()">Stop</a>
+
+        </p>
+    </div>
+
+
+
+
+  </div>
+
+  <!-- Load 3 Part Scripts -->
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+
+  <!-- Load Personal Scripts -->
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/home/cron.module.js"></script>
+  <script type="text/javascript" src="app/home/cron.controller.js"></script>
+
+
+</body>
+</html>
